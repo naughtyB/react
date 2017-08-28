@@ -1,0 +1,288 @@
+/*------------------------------------------------------
+gg
+---------------------------------------------------------*/
+
+
+/*------------------------------------------------------
+                公共样式开始
+---------------------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html{
+    height: 100%;
+    font-family:"Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+a{
+    text-decoration: none;;
+}
+
+/*------------------------------------------------------
+                公共样式结束
+---------------------------------------------------------*/
+
+
+/*------------------------------------------------------
+                整个网页布局开始
+---------------------------------------------------------*/
+#example{
+    height: 100%;
+}
+.app-layout{
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+}
+/*------------------------------------------------------
+                整个网页布局结束
+---------------------------------------------------------*/
+
+
+/*------------------------------------------------------
+                头部header的样式开始(logo)
+---------------------------------------------------------*/
+.app-layout-header{
+    display:flex;
+    flex-grow: 0;;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border:1px solid #bbbbbb;
+    box-sizing:border-box;
+}
+.app-layout-header-logo{
+    height: 60px;
+}
+/*------------------------------------------------------
+                头部header的样式结束
+---------------------------------------------------------*/
+
+
+/*这个用来搞路由的那个布局的*/
+.app-layout-content{
+    display:flex;
+    flex-grow:1;
+    align-items:center;
+    justify-content:center;
+}
+
+/*------------------------------------------------------
+                表单通用控件开始
+---------------------------------------------------------*/
+.app-layout-form{
+    width: 430px;
+    height: 500px;
+}
+.app-layout-form-title{
+    width: 100%;
+    height: 100px;
+    font-size:30px;
+    text-align:center;
+    line-height:100px;
+    color: #5f5f5f;
+}
+.app-layout-form-item{
+    margin-bottom: 10px;
+}
+.app-layout-form-item-content{
+    position:relative;
+    margin: 0 auto;
+    padding:7px;
+    width: 400px;
+    height: 50px;
+    border:1px solid #d8d8d8;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+.app-layout-form-item-content label{
+    height: 100px;
+    text-align:center;
+    color:#d8d8d8;
+}
+.app-layout-form-item-content label i{
+    margin-left: 2px;
+    font-size:25px;
+    vertical-align:middle;
+}
+.app-layout-form-item-content input[type=text],.app-layout-form-item-content input[type=password]{
+    margin-left:9px;;
+    vertical-align:middle;
+    width:310px;
+    height: 36px;
+    border:none;
+    outline:none;
+    font-size:20px;
+}
+.app-layout-form-item-content-outline{
+    position:absolute;
+    top: -1px;
+    left: -1px;
+    width:400px;
+    height: 50px;
+    border:1px solid #d8d8d8;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+.app-layout-form-item-content input:focus+.app-layout-form-item-content-outline{
+    border-color: #919dff;
+    box-shadow:0 0 10px #ddd;
+}
+.app-layout-form-item-content:hover .app-layout-form-item-content-outline{
+    border-color: #919dff;
+}
+.app-layout-form-item-content>.app-layout-form-item-content-clean{
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color:#d8d8d8;
+    transform-origin:center center;
+    transform:scale(0,0);
+    transition:transform 300ms;
+}
+.app-layout-form-item-content>.app-layout-form-item-content-clean:hover{
+    color: rgba(255,0,0,0.5)
+}
+.app-layout-form-item-error{
+    margin-left: 15px;
+    height: 20px;
+    line-height:20px;
+    font-size:12px;
+    text-align:left;
+    color:red;
+}
+/*------------------------------------------------------
+                表单通用控件结束
+---------------------------------------------------------*/
+
+
+/*------------------------------------------------------
+                登录部分开始
+---------------------------------------------------------*/
+/*.app-layout-login{
+    display:flex;
+    flex-grow:1;
+    align-items:center;
+    justify-content:center;
+}*/
+.app-layout-login .app-layout-login-form-supply{
+    display:flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 400px;
+}
+.app-layout-login .app-layout-login-form-supply-forget-password{
+    font-size:12px;
+    color: #108de8;
+}
+.app-layout-login .app-layout-login-form-supply-register{
+    font-size:12px;
+    color: #108de8;
+}
+.app-layout-login .app-layout-login-form-submit{
+    margin:10px 0 10px 15px;
+    width: 400px;
+    height: 50px;
+    border:none;
+    border-radius:5px;
+    text-align:center;
+    line-height: 50px;
+    font-size:18px;
+    color:white;
+    background-color: #108de8;
+    cursor:pointer;
+}
+.app-layout-login .app-layout-login-form-submit:hover{
+    background-color: #63cceb;
+}
+/*------------------------------------------------------
+                登录部分结束
+---------------------------------------------------------*/
+
+/*------------------------------------------------------
+                注册部分开始
+---------------------------------------------------------*/
+/*.app-layout-register{
+    display:flex;
+    flex-grow:1;
+    align-items:center;
+    justify-content:center;
+}*/
+#app-layout-form-item-content-mobile-test{
+    position:relative;
+}
+#app-layout-form-item-content-mobile-test label{
+    margin-left: 3px;
+}
+#app-layout-form-item-content-mobile-test input[type=text]{
+    width: 220px;
+    margin-left:11px;
+}
+#app-layout-form-item-content-mobile-test .app-layout-form-item-content-clean{
+    right: 103px;
+}
+#app-layout-form-item-content-mobile-test input[type=button]{
+    position:absolute;
+    right: -1px;
+    top: -1px;
+    width: 90px;
+    height: 50px;
+    outline:none;
+    border:1px solid #d8d8d8;
+    border-radius:0 5px 5px 0;
+    font-size:15px;
+    color:white;
+    background-color: skyblue;
+    cursor:pointer;
+    transition:background-color 500ms;
+}
+#app-layout-form-item-content-mobile-test input[type=button]:disabled{
+    background-color: #d8d8d8;
+    cursor: no-drop;
+}
+.app-layout-register .app-layout-register-form-submit{
+    margin:0 0 10px 15px;
+    width: 400px;
+    height: 50px;
+    border:none;
+    border-radius:5px;
+    text-align:center;
+    line-height: 50px;
+    font-size:18px;
+    color:white;
+    background-color: #87cb48;
+    cursor:pointer;
+    transition: background-color 500ms;
+}
+.app-layout-register .app-layout-register-form-submit:hover{
+    background-color: #a4cb78;
+}
+.app-layout-register .app-layout-register-form-submit:disabled{
+    background-color: #d8d8d8;
+    cursor:no-drop;
+}
+.app-layout-register .app-layout-register-form-supply{
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 400px;
+    font-size:12px;
+}
+.app-layout-register .app-layout-register-form-supply-login{
+    color: #108de8;
+}
+.app-layout-register .app-layout-register-form-supply input[type=checkbox]{
+    margin-right: 3px;
+    vertical-align:middle;
+    background-color: transparent;
+    border:none;
+    cursor:pointer;
+}
+.app-layout-register .app-layout-register-form-supply-agreement{
+    color: #108de8;
+}
+/*------------------------------------------------------
+                注册部分结束
+---------------------------------------------------------*/
